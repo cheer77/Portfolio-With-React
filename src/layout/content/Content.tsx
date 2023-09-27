@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const MainContent = styled.main`
+export function Content() {
+  return <StyledContent></StyledContent>;
+}
+
+const StyledContent = styled.main`
   flex: 1;
   height: 100%;
   background-color: #fff;

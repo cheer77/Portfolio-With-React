@@ -1,5 +1,5 @@
 const maxWidth = 1440;
-const phoneWidth = 390;
+const phoneWidth = 768;
 const maxWidthContainer = 1400;
 const phoneWidthFontSize = 390;
 
@@ -7,13 +7,7 @@ function stripUnit(value) {
   return parseFloat(value);
 }
 
-export function ac(
-  startSize,
-  minSize,
-  minBreakPoint = phoneWidth,
-  startBreakPoint = maxWidth,
-  flag = false
-) {
+export function ac(startSize, minSize, minBreakPoint = phoneWidth, startBreakPoint = maxWidth, flag = false) {
   const startValue = stripUnit(startSize);
   const minValue = stripUnit(minSize);
   const difference = startValue - minValue;
@@ -31,7 +25,7 @@ export function ac(
 
 export function perc(value, base = maxWidth) {
   // Если значение уже имеет единицы измерения (px, rem, em, % и т.д.), то используем его напрямую.
-  if (typeof value === "string") {
+  if (typeof value === 'string') {
     return `${(parseFloat(value) / base) * 100}%`;
   }
 

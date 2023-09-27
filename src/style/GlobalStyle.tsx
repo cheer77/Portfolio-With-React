@@ -1,18 +1,16 @@
-import { createGlobalStyle } from "styled-components";
-import { myTheme } from "./Theme.styled";
+import { createGlobalStyle } from 'styled-components';
+import { myTheme } from './Theme.styled';
 
 export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
   }
   
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-  
   body{
     background-color: #F0F0F6;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: ${myTheme.gray};
+    color: ${myTheme.gray.light};
   }
 
   * {
