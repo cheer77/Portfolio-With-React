@@ -48,4 +48,13 @@ const StyledSocialIcon = styled.a`
   &:hover {
     transform: scale(1.1);
   }
+
+  svg {
+    fill: #2b2b2b;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover svg {
+    fill: ${myTheme.gray.light};
+  }
 `;
