@@ -15,5 +15,4 @@ export const Cont = styled.div`
 export const ContentInner = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 100vh;
 `;

@@ -170,7 +170,7 @@ const DownloadCV = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #fdc644;
+    background-color: #fdc33a;
   }
 
   svg {

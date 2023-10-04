@@ -165,5 +165,11 @@
     <!--    Menu icon-->
 
 
+    <!--    Arrows icon-->
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" id="arrowRight">
+        <path d="M8.78129 5.33312L5.20529 1.75712L6.14796 0.814453L11.3333 5.99979L6.14796 11.1851L5.20529 10.2425L8.78129 6.66645H0.666626V5.33312H8.78129Z" fill="#2B2B2B"></path>
+    </symbol>
+    <!--    Arrows icon-->
+
 </svg>
 

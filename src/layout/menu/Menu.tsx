@@ -39,10 +39,27 @@ export function Menu() {
 }
 
 const StyledMenu = styled.nav`
+  position: sticky;
+  top: 0;
   max-width: 7.5%;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #fff;
+  overflow: auto;
+  padding-bottom: 20px;
+
+  &::-webkit-scrollbar {
+    width: 2px; /* ширина всей полосы прокрутки */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #d0d0d0; /* цвет зоны отслеживания */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px; /* округлось бегунка */
+    border: 1px solid ${myTheme.yellow};
+  }
 `;
 
 const StyledMenuInner = styled.div`

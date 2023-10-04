@@ -11,3 +11,13 @@ export const flicker = keyframes`
     opacity: 1;
   }
 `;
+
+export const arrowRight = keyframes`
+  0%{
+    left: 9px;
+  }
+
+  100%{
+    left: 15px;
+  }
+`;

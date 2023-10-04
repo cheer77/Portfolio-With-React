@@ -5,12 +5,14 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
   }
-  
-  body{
+
+  body {
     background-color: #F0F0F6;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: ${myTheme.gray.light};
+
+
   }
 
   * {
