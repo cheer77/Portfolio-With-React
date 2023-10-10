@@ -171,5 +171,13 @@
     </symbol>
     <!--    Arrows icon-->
 
+    <!--    Check + close icon-->
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 13" id="check">
+        <path d="M6.99999 10.172L16.192 0.979004L17.607 2.393L6.99999 13L0.635986 6.636L2.04999 5.222L6.99999 10.172Z" fill="#FFB400"></path>
+    </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 14" id="close">
+        <path d="M7.44261 5.58599L12.5752 0.635986L14.0413 2.04999L8.90876 6.99999L14.0413 11.95L12.5752 13.364L7.44261 8.41399L2.31003 13.364L0.843872 11.95L5.97645 6.99999L0.843872 2.04999L2.31003 0.635986L7.44261 5.58599Z" fill="#767676"></path>
+    </symbol>
+
 </svg>
 

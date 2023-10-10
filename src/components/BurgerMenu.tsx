@@ -2,21 +2,30 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { myTheme } from '../style/Theme.styled';
 
-export const BurgerMenu: React.FC = () => {
-  const [isClicked, setIsClicked] = useState(false);
+// function StyledProfile(props: { isClicked: boolean }) {
+//   return null;
+// }
 
+type BurgerMenuProps = {
+  isClicked: boolean;
+  setIsClicked: (isClicked: boolean) => void;
+};
+
+export const BurgerMenu: React.FC<BurgerMenuProps> = ({ isClicked, setIsClicked }) => {
   const toggleSpan = () => {
     setIsClicked(!isClicked);
   };
 
   return (
-    <BurgerMenuStyled onClick={toggleSpan} isClicked={isClicked}>
-      <div>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </BurgerMenuStyled>
+    <>
+      <BurgerMenuStyled onClick={toggleSpan} isClicked={isClicked}>
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </BurgerMenuStyled>
+    </>
   );
 };
 
@@ -25,6 +34,7 @@ type BurgerMenuStyledProps = {
 };
 
 const BurgerMenuStyled = styled.div<BurgerMenuStyledProps>`
+  display: none;
   position: absolute;
   margin-top: 30px;
   max-width: 30px;
@@ -67,5 +77,9 @@ const BurgerMenuStyled = styled.div<BurgerMenuStyledProps>`
       margin: ${props => (props.isClicked ? 'auto' : 'inherit')};
       transform: ${props => (props.isClicked ? 'rotate(-45deg)' : 'none')};
     }
+  }
+
+  @media (max-width: 960px) {
+    display: block;
   }
 `;

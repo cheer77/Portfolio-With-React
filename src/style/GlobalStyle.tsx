@@ -10,10 +10,14 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #F0F0F6;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+    text-transform: capitalize;
     color: ${myTheme.gray.light};
-
-
   }
+  
+  div{
+    box-sizing: border-box;
+  }
+  
 
   * {
     margin: 0;

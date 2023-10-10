@@ -8,12 +8,7 @@ import { ac } from '../../../utils/mixins';
 export const ServicesBlock = () => {
   return (
     <ServicesSection>
-      <Titles
-        title={'my services'}
-        description={
-          'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
-        }
-      ></Titles>
+      <Titles title={'my services'}></Titles>
 
       <ServicesItems>
         <ServicesItem>
@@ -62,12 +57,16 @@ const ServicesSection = styled.section`
 
 const ServicesItems = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
   grid-auto-flow: dense;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   justify-items: center;
   align-items: center;
+
+  @media (max-width: 1280px) {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  }
 `;
 
 const ServicesItem = styled.div`

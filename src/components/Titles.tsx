@@ -5,14 +5,16 @@ import { ac } from '../utils/mixins';
 
 type TitlesProps = {
   title: string;
-  description: string;
 };
 
-export const Titles: React.FC<TitlesProps> = ({ title, description }) => {
+export const Titles: React.FC<TitlesProps> = ({ title }) => {
   return (
     <TitlesStyled>
       <TitlesBigText>{title}</TitlesBigText>
-      <p>{description}</p>
+      <p>
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+        velit mollit. lorem ipsum
+      </p>
     </TitlesStyled>
   );
 };

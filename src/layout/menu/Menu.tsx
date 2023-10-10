@@ -60,12 +60,29 @@ const StyledMenu = styled.nav`
     border-radius: 20px; /* округлось бегунка */
     border: 1px solid ${myTheme.yellow};
   }
+
+  @media (max-width: 960px) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: inherit;
+    max-width: 100%;
+    height: auto;
+    padding: 10px 0;
+    z-index: 100;
+    box-shadow: 0px -4px 17px 1px rgba(34, 60, 80, 0.2);
+  }
 `;
 
 const StyledMenuInner = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 960px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `;
 
 const StyleDayNight = styled.a`
@@ -76,6 +93,11 @@ const StyleDayNight = styled.a`
   svg {
     transition: all 0.3s ease-in-out;
     fill: ${myTheme.black};
+  }
+
+  @media (max-width: 960px) {
+    margin-top: 6px;
+    margin-bottom: 0;
   }
 `;
 
@@ -105,5 +127,10 @@ const StyledMenuBtn = styled.a`
 
   &:hover svg {
     fill: ${myTheme.black};
+  }
+
+  @media (max-width: 960px) {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 `;

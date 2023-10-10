@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import bg from '../../../images/bg.svg';
 import profilePhoto from '../../../images/transparent-photo.png';
@@ -7,12 +7,13 @@ import { myTheme } from '../../../style/Theme.styled';
 import { Icons } from '../../../components/Icons';
 import { arrowRight } from '../../../animations/Animations';
 import { BurgerMenu } from '../../../components/BurgerMenu';
+import { Profile } from '../../profile/Profile';
 
 export const HelloBlock = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
   return (
     <HelloSection>
-      <BurgerMenu></BurgerMenu>
-
       <HelloSectionInner>
         <HelloTextBlock>
           <h1>
@@ -56,6 +57,12 @@ const HelloSection = styled.section`
 
 const HelloSectionInner = styled.div`
   display: flex;
+
+  @media (max-width: 960px) {
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const HelloTextBlock = styled.div`
@@ -117,5 +124,12 @@ const HelloImgBlock = styled.div`
     position: absolute;
     width: 100%;
     bottom: ${ac('-130px', '0px')};
+  }
+
+  @media (max-width: 960px) {
+    img {
+      position: inherit;
+      bottom: 0;
+    }
   }
 `;

@@ -1,14 +1,15 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { ac } from '../../utils/mixins';
-import { Icons } from '../../components/Icons';
 import { PhotoSoc } from './blocks/PhotoSoc';
 import { Labels } from './blocks/Labels';
 import { Progress } from './blocks/Progress';
 import { myTheme } from '../../style/Theme.styled';
+import React, { useState } from 'react';
 
-export function Profile() {
+export function Profile({ isClicked }: { isClicked: boolean }) {
+  // const [isClicked, setIsClicked] = useState(false);
   return (
-    <StyledProfile>
+    <StyledProfile isClicked={isClicked}>
       <PhotoSoc></PhotoSoc>
 
       <Labels></Labels>
@@ -18,10 +19,12 @@ export function Profile() {
   );
 }
 
-const StyledProfile = styled.aside`
+// @ts-ignore
+const StyledProfile = styled.aside<{ isClicked: boolean }>`
   position: relative;
   top: 0;
   max-width: 21.25%;
+  //max-width: 305px;
   width: 100%;
   background-color: #fff;
   height: 100%;
@@ -42,5 +45,19 @@ const StyledProfile = styled.aside`
     background-color: ${myTheme.yellow};
     border-radius: 20px; /* округлось бегунка */
     border: 0.5px solid ${myTheme.yellow};
+  }
+
+  @media (max-width: 960px) {
+    position: absolute;
+    max-width: 300px;
+    width: 100%;
+    z-index: 99;
+    left: -20px;
+    transition: all 0.5s ease-in-out;
+    ${props =>
+      !props.isClicked &&
+      css<{ isClicked: boolean }>`
+        left: -500px;
+      `}
   }
 `;
