@@ -7,7 +7,7 @@ import { ac } from '../../../utils/mixins';
 
 export const ServicesBlock = () => {
   return (
-    <ServicesSection>
+    <ServicesSection id={'code'}>
       <Titles title={'my services'}></Titles>
 
       <ServicesItems>
@@ -63,17 +63,13 @@ const ServicesItems = styled.div`
   grid-row-gap: 20px;
   justify-items: center;
   align-items: center;
-
-  @media (max-width: 1280px) {
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  }
 `;
 
 const ServicesItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 310px;
+  max-width: 350px;
   width: 100%;
   background-color: #fff;
   min-height: 225px;

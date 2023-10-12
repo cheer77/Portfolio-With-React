@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import bg from '../../../images/bg.svg';
-import profilePhoto from '../../../images/transparent-photo.png';
+import profilePhoto from '../../../images/transparent-photo.webp';
 import { ac } from '../../../utils/mixins';
 import { myTheme } from '../../../style/Theme.styled';
 import { Icons } from '../../../components/Icons';
 import { arrowRight } from '../../../animations/Animations';
-import { BurgerMenu } from '../../../components/BurgerMenu';
-import { Profile } from '../../profile/Profile';
 
 export const HelloBlock = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <HelloSection>
+    <HelloSection id={'home'}>
       <HelloSectionInner>
         <HelloTextBlock>
           <h1>
@@ -57,9 +55,13 @@ const HelloSection = styled.section`
 
 const HelloSectionInner = styled.div`
   display: flex;
+  justify-content: space-around;
 
-  @media (max-width: 960px) {
+  @media (max-width: 992px) {
     padding-top: 60px;
+  }
+
+  @media (max-width: 576px) {
     flex-direction: column;
     align-items: center;
   }
@@ -126,10 +128,18 @@ const HelloImgBlock = styled.div`
     bottom: ${ac('-130px', '0px')};
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 992px) {
+    min-height: 384px;
+    max-width: 230px;
     img {
-      position: inherit;
+      width: auto;
       bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
+  }
+
+  @media (max-width: 576px) {
   }
 `;

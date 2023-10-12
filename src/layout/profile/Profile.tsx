@@ -47,7 +47,7 @@ const StyledProfile = styled.aside<{ isClicked: boolean }>`
     border: 0.5px solid ${myTheme.yellow};
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 992px) {
     position: absolute;
     max-width: 300px;
     width: 100%;

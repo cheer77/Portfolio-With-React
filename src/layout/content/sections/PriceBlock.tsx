@@ -8,18 +8,18 @@ import { myTheme } from '../../../style/Theme.styled';
 import { Icons } from '../../../components/Icons';
 
 export const PriceBlock = () => {
-  // const isMobile = window.innerWidth <= 1024;
-
   // Настройки Swiper
   const swiperParams = {
-    // slidesPerView: isMobile ? 1 : 3,
     spaceBetween: 10,
     breakpoints: {
       500: {
-        slidesPerView: 1.4,
+        slidesPerView: 1,
       },
-      501: {
+      550: {
         slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2.5,
       },
       1024: {
         slidesPerView: 2.3,
@@ -192,6 +192,13 @@ export const PriceBlock = () => {
 
 const PriceSection = styled.section`
   margin-bottom: ${ac('70px', '50px')};
+
+  @media (max-width: 550px) {
+    .swiper {
+      max-width: 310px;
+      overflow: initial;
+    }
+  }
 `;
 
 type StyledSlide = {
@@ -259,6 +266,18 @@ const StyledSlide = styled.div<StyledSlide>`
 
     &:hover {
       background-color: ${myTheme.yellow};
+    }
+  }
+
+  @media (max-width: 960px) {
+    max-width: 340px;
+  }
+
+  @media (max-width: 550px) {
+    max-width: 100%;
+
+    ul {
+      width: initial;
     }
   }
 `;

@@ -2,27 +2,41 @@ import styled from 'styled-components';
 import { myTheme } from '../../style/Theme.styled';
 import { Icons } from '../../components/Icons';
 import { ac } from '../../utils/mixins';
+import { scroller } from 'react-scroll';
+// import { scroller } from 'react-scroll';
+
+// type MenuPropsType = {
+//   id?: string;
+// };
 
 export function Menu() {
+  const handleClick = (target: string) => {
+    scroller.scrollTo(target, {
+      duration: 500, // Длительность скролла
+      smooth: true, // Включить плавный скролл
+      offset: -70, // Опциональное смещение
+    });
+  };
+
   return (
     <StyledMenu>
       <StyledMenuInner>
         <StyleDayNight>
           <Icons width={'25'} height={'25'} iconId={'dayNight'}></Icons>
         </StyleDayNight>
-        <StyledMenuBtn href="">
+        <StyledMenuBtn onClick={() => handleClick('home')}>
           <Icons width={'16'} height={'15'} iconId={'home'}></Icons>
         </StyledMenuBtn>
 
-        <StyledMenuBtn href="">
+        <StyledMenuBtn onClick={() => handleClick('code')}>
           <Icons width={'16'} height={'15'} iconId={'code'}></Icons>
         </StyledMenuBtn>
 
-        <StyledMenuBtn href="">
+        <StyledMenuBtn onClick={() => handleClick('student')}>
           <Icons width={'16'} height={'15'} iconId={'student'}></Icons>
         </StyledMenuBtn>
 
-        <StyledMenuBtn href="">
+        <StyledMenuBtn onClick={() => handleClick('work')}>
           <Icons width={'16'} height={'15'} iconId={'work'}></Icons>
         </StyledMenuBtn>
 
@@ -61,7 +75,7 @@ const StyledMenu = styled.nav`
     border: 1px solid ${myTheme.yellow};
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 992px) {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -79,7 +93,7 @@ const StyledMenuInner = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 960px) {
+  @media (max-width: 992px) {
     flex-direction: row;
     justify-content: space-around;
   }
@@ -95,7 +109,7 @@ const StyleDayNight = styled.a`
     fill: ${myTheme.black};
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 992px) {
     margin-top: 6px;
     margin-bottom: 0;
   }
@@ -129,7 +143,7 @@ const StyledMenuBtn = styled.a`
     fill: ${myTheme.black};
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 992px) {
     margin-top: 0;
     margin-bottom: 0;
   }

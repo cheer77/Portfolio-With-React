@@ -79,7 +79,7 @@ const BurgerMenuStyled = styled.div<BurgerMenuStyledProps>`
     }
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: 992px) {
     display: block;
   }
 `;
