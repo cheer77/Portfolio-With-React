@@ -5,6 +5,7 @@ import { PriceBlock } from './sections/PriceBlock';
 import { RecommendBlock } from './sections/RecommendBlock';
 import { EducationBlock } from './sections/EducationBlock';
 import { WorkBlock } from './sections/WorkBlock';
+import { ProfileBlock } from './sections/ProfileBlock';
 
 export function Content() {
   return (
@@ -15,6 +16,7 @@ export function Content() {
       <RecommendBlock />
       <EducationBlock />
       <WorkBlock />
+      <ProfileBlock />
     </StyledContent>
   );
 }
