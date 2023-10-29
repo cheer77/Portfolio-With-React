@@ -1,15 +1,30 @@
 {
   "files": {
-    "main.css": "/Portfolio-With-React/static/css/main.4703d720.css",
-    "main.js": "/Portfolio-With-React/static/js/main.8bdd9671.js",
+    "main.css": "/Portfolio-With-React/static/css/main.c1b529e0.css",
+    "main.js": "/Portfolio-With-React/static/js/main.51c3da3f.js",
     "static/js/787.25eaef86.chunk.js": "/Portfolio-With-React/static/js/787.25eaef86.chunk.js",
+    "static/media/portfolio-photo.jpeg": "/Portfolio-With-React/static/media/portfolio-photo.2c4763cd6a9e9e1a77f2.jpeg",
+    "static/media/port7.webp": "/Portfolio-With-React/static/media/port7.68efacbbff9f126c3ed0.webp",
+    "static/media/icon-sprite.svg": "/Portfolio-With-React/static/media/icon-sprite.446c0c29ae222da513082546c5678bd5.svg",
+    "static/media/port8.webp": "/Portfolio-With-React/static/media/port8.8884118093fab5a66237.webp",
+    "static/media/transparent-photo.webp": "/Portfolio-With-React/static/media/transparent-photo.ae8b71badd77e9e2b10f.webp",
+    "static/media/port9.webp": "/Portfolio-With-React/static/media/port9.88aa242e9c5a38377c08.webp",
+    "static/media/port5.webp": "/Portfolio-With-React/static/media/port5.134b3c48f3aef9372c57.webp",
+    "static/media/port4.webp": "/Portfolio-With-React/static/media/port4.d650a0892a74f44c5552.webp",
+    "static/media/port6.webp": "/Portfolio-With-React/static/media/port6.18f1b4c0ed96e920e2a4.webp",
+    "static/media/port3.webp": "/Portfolio-With-React/static/media/port3.28570ca0a16825c95542.webp",
+    "static/media/port1.webp": "/Portfolio-With-React/static/media/port1.ad703a3c1df8ca7440ed.webp",
+    "static/media/recomend3.png": "/Portfolio-With-React/static/media/recomend3.71186245ad2f0d047230.png",
+    "static/media/recomend2.png": "/Portfolio-With-React/static/media/recomend2.df36d8c2447da4b6ec99.png",
+    "static/media/port2.webp": "/Portfolio-With-React/static/media/port2.d94f20363df1e984cd72.webp",
+    "static/media/bg.svg": "/Portfolio-With-React/static/media/bg.871747dfc4fa3f6e098f9772059eec90.svg",
     "index.html": "/Portfolio-With-React/index.html",
-    "main.4703d720.css.map": "/Portfolio-With-React/static/css/main.4703d720.css.map",
-    "main.8bdd9671.js.map": "/Portfolio-With-React/static/js/main.8bdd9671.js.map",
+    "main.c1b529e0.css.map": "/Portfolio-With-React/static/css/main.c1b529e0.css.map",
+    "main.51c3da3f.js.map": "/Portfolio-With-React/static/js/main.51c3da3f.js.map",
     "787.25eaef86.chunk.js.map": "/Portfolio-With-React/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4703d720.css",
-    "static/js/main.8bdd9671.js"
+    "static/css/main.c1b529e0.css",
+    "static/js/main.51c3da3f.js"
   ]
 }
