@@ -6,6 +6,7 @@ import { RecommendBlock } from './sections/RecommendBlock';
 import { EducationBlock } from './sections/EducationBlock';
 import { WorkBlock } from './sections/WorkBlock';
 import { ProfileBlock } from './sections/ProfileBlock';
+import { BlogBlock } from './sections/blog/BlogBlock';
 
 export function Content() {
   return (
@@ -17,6 +18,7 @@ export function Content() {
       <EducationBlock />
       <WorkBlock />
       <ProfileBlock />
+      <BlogBlock />
     </StyledContent>
   );
 }

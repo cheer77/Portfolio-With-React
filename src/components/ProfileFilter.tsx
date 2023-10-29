@@ -17,15 +17,15 @@ import 'swiper/css';
 export const ProfileFilter: React.FC = () => {
   const [filter, setFilter] = useState<string>('all');
   const images: Image[] = [
-    { id: 1, category: 'ui', src: `${port1}` },
-    { id: 2, category: 'ui', src: `${port2}` },
-    { id: 3, category: 'web', src: `${port3}` },
-    { id: 4, category: 'web', src: `${port4}` },
-    { id: 5, category: 'mobile', src: `${port5}` },
-    { id: 6, category: 'mobile', src: `${port6}` },
-    { id: 7, category: 'illustration', src: `${port7}` },
-    { id: 8, category: 'illustration', src: `${port8}` },
-    { id: 9, category: 'illustration', src: `${port9}` },
+    { id: 1, category: 'UI Design', src: `${port1}` },
+    { id: 2, category: 'UI Design', src: `${port2}` },
+    { id: 3, category: 'Web Development', src: `${port3}` },
+    { id: 4, category: 'Web Development', src: `${port4}` },
+    { id: 5, category: 'Mobile App', src: `${port5}` },
+    { id: 6, category: 'Mobile App', src: `${port6}` },
+    { id: 7, category: 'Illustration', src: `${port7}` },
+    { id: 8, category: 'Illustration', src: `${port8}` },
+    { id: 9, category: 'Illustration', src: `${port9}` },
   ];
 
   const filteredImages: Image[] = filter === 'all' ? images : images.filter(image => image.category === filter);
@@ -45,21 +45,13 @@ export const ProfileFilter: React.FC = () => {
     <ProfileFilterContainer>
       <ButtonsContainer>
         <Swiper {...swiperParams}>
-          <SwiperSlide>
-            <button onClick={() => handleFilterChange('all')}>All</button>
-          </SwiperSlide>
-          <SwiperSlide>
-            <button onClick={() => handleFilterChange('ui')}>UI Design</button>
-          </SwiperSlide>
-          <SwiperSlide>
-            <button onClick={() => handleFilterChange('web')}>Web Development</button>
-          </SwiperSlide>
-          <SwiperSlide>
-            <button onClick={() => handleFilterChange('mobile')}>Mobile App</button>
-          </SwiperSlide>
-          <SwiperSlide>
-            <button onClick={() => handleFilterChange('illustration')}>Illustration</button>
-          </SwiperSlide>
+          {['all', 'UI Design', 'Web Development', 'Mobile App', 'Illustration'].map(category => (
+            <SwiperSlide key={category}>
+              <button className={filter === category ? 'active' : ''} onClick={() => handleFilterChange(category)}>
+                {category === 'all' ? 'All' : category}
+              </button>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </ButtonsContainer>
       <ImageContainer>
@@ -88,24 +80,53 @@ const ButtonsContainer = styled.div`
   margin: 0 auto 50px;
 
   .swiper-wrapper {
+    justify-content: center;
     div + div {
       margin-left: 30px;
+    }
+
+    @media (max-width: 576px) {
+      justify-content: inherit;
+
+      div + div {
+        margin-left: 20px;
+      }
     }
   }
 
   .swiper-slide {
     width: fit-content !important;
   }
+
+  button {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &.active {
+      color: ${myTheme.yellow}; /* Измените цвет для активной кнопки */
+    }
+
+    &:hover {
+      color: ${myTheme.yellow};
+    }
+  }
+
+  @media (max-width: 576px) {
+    max-width: 100%;
+  }
 `;
 
 const ImageContainer = styled.div`
   display: grid;
-  //grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-template-columns: repeat(3, minmax(200px, 310px));
+  grid-template-columns: repeat(3, minmax(170px, 310px));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  //justify-items: center;
   align-items: center;
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-items: center;
+  }
 `;
 
 const ImageBoxLink = styled.a`
