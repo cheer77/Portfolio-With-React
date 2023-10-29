@@ -51,13 +51,13 @@ const InfoContainer = styled.div`
   margin-left: 30px;
 
   h2 {
-    font-size: ${ac('32px', '27px')};
+    font-size: ${ac('32px', '25px')};
     font-style: normal;
     font-weight: 700;
     line-height: 123.6%;
     text-transform: capitalize;
     color: ${myTheme.black};
-    margin-bottom: 50px;
+    margin-bottom: ${ac('50px', '20px')};
   }
 
   @media (max-width: 768px) {

@@ -35,13 +35,13 @@ const FormInner = styled.div`
   max-width: 570px;
   width: 100%;
   h2 {
-    font-size: ${ac('32px', '27px')};
+    font-size: ${ac('32px', '25px')};
     font-style: normal;
     font-weight: 700;
     line-height: 123.6%;
     text-transform: capitalize;
     color: ${myTheme.black};
-    margin-bottom: 50px;
+    margin-bottom: ${ac('50px', '20px')};
   }
 `;
 
