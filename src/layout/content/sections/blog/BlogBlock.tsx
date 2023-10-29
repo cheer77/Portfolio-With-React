@@ -6,6 +6,10 @@ import { BlogItemSlide } from './BlogItemSlide';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
+import blog1 from '../../../../images/portfolio/port1.webp';
+import blog2 from '../../../../images/portfolio/port2.webp';
+import blog3 from '../../../../images/portfolio/port3.webp';
+
 import { register } from 'swiper/element/bundle';
 // register Swiper custom elements
 register();
@@ -40,13 +44,34 @@ export const BlogBlock = () => {
     },
   };
   return (
-    <BlogSection>
+    <BlogSection id={'blog'}>
       <Titles title={'Blog'} />
 
       <BlogInner>
         <Swiper {...swiperParams}>
           <SwiperSlide>
-            <BlogItemSlide />
+            <BlogItemSlide
+              imgSrc={blog1}
+              title={'How to make web templates'}
+              text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna '}
+              alt={'blog item'}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <BlogItemSlide
+              imgSrc={blog1}
+              title={'How to make web templates'}
+              text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna '}
+              alt={'blog item'}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <BlogItemSlide
+              imgSrc={blog1}
+              title={'How to make web templates'}
+              text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna '}
+              alt={'blog item'}
+            />
           </SwiperSlide>
         </Swiper>
       </BlogInner>
@@ -58,4 +83,9 @@ const BlogSection = styled.section`
   margin-bottom: ${ac('70px', '50px')}; ;
 `;
 
-const BlogInner = styled.div``;
+const BlogInner = styled.div`
+  @media (max-width: 576px) {
+    max-width: 310px;
+    margin: 0 auto;
+  }
+`;

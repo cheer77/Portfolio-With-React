@@ -193,6 +193,9 @@
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="plus">
         <path d="M13.8334 13.8333V0.833313H18.1667V13.8333H31.1667V18.1666H18.1667V31.1666H13.8334V18.1666H0.833374V13.8333H13.8334Z" fill="#2B2B2B"></path>
     </symbol>
+    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 7" id="link-arrow">
+        <path d="M3.14339 4.00001L0.785889 1.64334L1.96422 0.464172L5.50005 4.00001L1.96422 7.53584L0.785889 6.35667L3.14339 4.00001Z" fill="#FFB400"/>
+    </symbol>
     <!--    Check + close icon + star + mail + map + phone + plus-->
 </svg>
 

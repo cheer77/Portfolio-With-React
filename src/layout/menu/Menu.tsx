@@ -40,11 +40,11 @@ export function Menu() {
           <Icons width={'16'} height={'15'} iconId={'work'}></Icons>
         </StyledMenuBtn>
 
-        <StyledMenuBtn href="">
+        <StyledMenuBtn onClick={() => handleClick('blog')}>
           <Icons width={'16'} height={'15'} iconId={'blog'}></Icons>
         </StyledMenuBtn>
 
-        <StyledMenuBtn href="">
+        <StyledMenuBtn onClick={() => handleClick('contact')}>
           <Icons width={'16'} height={'15'} iconId={'contact'}></Icons>
         </StyledMenuBtn>
       </StyledMenuInner>
@@ -102,7 +102,7 @@ const StyledMenuInner = styled.div`
 const StyleDayNight = styled.a`
   margin-top: ${ac('52px', '20px')};
   cursor: pointer;
-  margin-bottom: ${ac('170px', '90px')};
+  margin-bottom: ${ac('140px', '80px')};
 
   svg {
     transition: all 0.3s ease-in-out;
