@@ -9,6 +9,9 @@ import { ProfileBlock } from './sections/ProfileBlock';
 import { BlogBlock } from './sections/blog/BlogBlock';
 import { ContactBlock } from './sections/ContactBlock';
 import { Map } from './sections/Map';
+import { Logos } from './sections/Logos';
+import { Footer } from '../footer/Footer';
+import React from 'react';
 
 export function Content() {
   return (
@@ -23,6 +26,8 @@ export function Content() {
       <BlogBlock />
       <ContactBlock />
       <Map />
+      <Logos />
+      <Footer />
     </StyledContent>
   );
 }

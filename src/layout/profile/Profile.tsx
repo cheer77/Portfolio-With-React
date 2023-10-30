@@ -5,21 +5,22 @@ import { Labels } from './blocks/Labels';
 import { Progress } from './blocks/Progress';
 import { myTheme } from '../../style/Theme.styled';
 import React, { useState } from 'react';
+import { BurgerMenu } from '../../components/BurgerMenu';
 
 export function Profile({ isClicked }: { isClicked: boolean }) {
-  // const [isClicked, setIsClicked] = useState(false);
   return (
-    <StyledProfile isClicked={isClicked}>
-      <PhotoSoc></PhotoSoc>
+    <>
+      <StyledProfile isClicked={isClicked}>
+        <PhotoSoc></PhotoSoc>
 
-      <Labels></Labels>
+        <Labels></Labels>
 
-      <Progress></Progress>
-    </StyledProfile>
+        <Progress></Progress>
+      </StyledProfile>
+    </>
   );
 }
 
-// @ts-ignore
 const StyledProfile = styled.aside<{ isClicked: boolean }>`
   position: relative;
   top: 0;
@@ -48,16 +49,23 @@ const StyledProfile = styled.aside<{ isClicked: boolean }>`
   }
 
   @media (max-width: 992px) {
-    position: absolute;
+    position: fixed;
     max-width: 300px;
     width: 100%;
     z-index: 99;
-    left: -20px;
+    left: 0;
+    padding-bottom: 100px;
     transition: all 0.5s ease-in-out;
     ${props =>
       !props.isClicked &&
       css<{ isClicked: boolean }>`
-        left: -500px;
+        left: -1000px;
       `}
+  }
+
+  @media (max-width: 576px) {
+    //position: relative;
+    max-width: 100%;
+    padding-right: 50px;
   }
 `;

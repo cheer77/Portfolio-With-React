@@ -4,6 +4,7 @@ import { Menu } from './layout/menu/Menu';
 import { Content } from './layout/content/Content';
 import { BurgerMenu } from './components/BurgerMenu';
 import React, { useState } from 'react';
+import { Footer } from './layout/footer/Footer';
 
 function App() {
   const [isClicked, setIsClicked] = useState(false);

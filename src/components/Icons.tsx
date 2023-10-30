@@ -7,6 +7,7 @@ type IconsPropsType = {
   height?: string;
   viewBox?: string;
   count?: number;
+  fill?: string;
 };
 
 export const Icons = (props: IconsPropsType) => {
@@ -16,6 +17,7 @@ export const Icons = (props: IconsPropsType) => {
       height={props.height || '14'}
       xmlns="http://www.w3.org/2000/svg"
       viewBox={props.viewBox || '0 0 14 14'}
+      fill={props.fill || '#767676'}
     >
       <use xlinkHref={`${iconsSprite}#${props.iconId}`} />
     </svg>

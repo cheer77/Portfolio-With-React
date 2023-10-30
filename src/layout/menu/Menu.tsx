@@ -3,6 +3,8 @@ import { myTheme } from '../../style/Theme.styled';
 import { Icons } from '../../components/Icons';
 import { ac } from '../../utils/mixins';
 import { scroller } from 'react-scroll';
+import { BurgerMenu } from '../../components/BurgerMenu';
+import React, { useState } from 'react';
 // import { scroller } from 'react-scroll';
 
 // type MenuPropsType = {
@@ -18,6 +20,7 @@ export function Menu() {
     });
   };
 
+  // @ts-ignore
   return (
     <StyledMenu>
       <StyledMenuInner>
@@ -102,7 +105,7 @@ const StyledMenuInner = styled.div`
 const StyleDayNight = styled.a`
   margin-top: ${ac('52px', '20px')};
   cursor: pointer;
-  margin-bottom: ${ac('140px', '80px')};
+  margin-bottom: ${ac('120px', '60px')};
 
   svg {
     transition: all 0.3s ease-in-out;

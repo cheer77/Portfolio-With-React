@@ -5,21 +5,28 @@ import { Info } from './Contact/Info';
 import { ac } from '../../../utils/mixins';
 import { myTheme } from '../../../style/Theme.styled';
 
+type InfoItem = {
+  label: string;
+  value: string;
+  useAnchor?: boolean;
+  hrefType: 'tel' | 'mailto' | 'skype' | 'telegram'; // Определите типы протоколов
+};
 export const ContactBlock = () => {
   const infoCountry = [
     { label: 'Country:', value: 'Ukraine' },
     { label: 'City:', value: 'Kyiv' },
     { label: 'Streat:', value: 'Khreshchatyk' },
   ];
-  const infoContact = [
-    { label: 'Email:', value: 'alex.c@gmail.com' },
-    { label: 'Skype:', value: '@Alex' },
-    { label: 'Telegram:', value: '@Alex' },
+  const infoContact: InfoItem[] = [
+    { label: 'Email:', value: 'alex.c@gmail.com', useAnchor: true, hrefType: 'mailto' },
+    { label: 'Skype:', value: '@Alex', useAnchor: true, hrefType: 'skype' },
+    { label: 'Telegram:', value: '@Alex', useAnchor: true, hrefType: 'telegram' },
   ];
-  const infoAddress = [
-    { label: 'Phone', value: '+58 (021)356 587 235' },
-    { label: 'Office:', value: '+58 (021)356 587 235' },
-    { label: 'Personal:', value: '+58 (021)356 587 235' },
+
+  const infoAddress: InfoItem[] = [
+    { label: 'Phone', value: '+58 (021)356 587 235', useAnchor: true, hrefType: 'tel' },
+    { label: 'Office:', value: '+58 (021)356 587 235', useAnchor: true, hrefType: 'tel' },
+    { label: 'Personal:', value: '+58 (021)356 587 235', useAnchor: true, hrefType: 'tel' },
   ];
   return (
     <ContactSection id={'contact'}>

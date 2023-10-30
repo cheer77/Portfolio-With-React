@@ -9,7 +9,7 @@ export const Cont = styled.div`
 
   @media (max-width: 992px) {
     width: 100%;
-    padding: 0 15px 60px 15px;
+    padding: 0 15px 61px 15px;
   }
 `;
 

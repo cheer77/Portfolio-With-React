@@ -1,6 +1,7 @@
 import React, { CSSProperties } from 'react';
 import styled from 'styled-components';
 import { ac } from '../../../utils/mixins';
+import { myTheme } from '../../../style/Theme.styled';
 
 export const Map = () => {
   const iframeStyle: CSSProperties = {
@@ -25,5 +26,11 @@ export const Map = () => {
 };
 
 const MapSection = styled.section`
+  min-height: 300px;
+
   margin-bottom: ${ac('71px', '50px')};
+
+  iframe {
+    background-color: ${myTheme.gray.light};
+  }
 `;

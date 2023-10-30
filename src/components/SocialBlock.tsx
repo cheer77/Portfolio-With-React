@@ -33,6 +33,11 @@ const StyledSocialBlock = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: 576px) {
+    max-width: 350px;
+    margin: 15px auto 0;
+  }
 `;
 
 const StyledSocialIcon = styled.a`

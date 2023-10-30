@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     text-transform: capitalize;
     color: ${myTheme.gray.light};
+    
+    &.hidden{
+      overflow: hidden;
+    }
   }
   
   div{

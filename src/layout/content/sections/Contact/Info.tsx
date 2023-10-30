@@ -3,9 +3,16 @@ import styled from 'styled-components';
 import { myTheme } from '../../../../style/Theme.styled';
 import { Icons } from '../../../../components/Icons';
 
+type InfoItem = {
+  label: string;
+  value: string;
+  useAnchor?: boolean;
+  hrefType?: 'tel' | 'mailto' | 'skype' | 'telegram'; // Определите типы протоколов
+};
+
 type InfoTypeProps = {
   iconId: string;
-  infoItems: { label: string; value: string }[];
+  infoItems: InfoItem[]; // Используйте тип InfoItem для infoItems
 };
 
 export const Info = (props: InfoTypeProps) => {
@@ -18,7 +25,7 @@ export const Info = (props: InfoTypeProps) => {
         {props.infoItems.map((item, index) => (
           <InfoItem key={index}>
             <span>{item.label}</span>
-            <p>{item.value}</p>
+            {item.useAnchor ? <a href={`${item.hrefType}:${item.value}`}>{item.value}</a> : <p>{item.value}</p>}
           </InfoItem>
         ))}
       </InfoInner>
@@ -67,6 +74,17 @@ const InfoInner = styled.div`
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
+  }
+
+  a {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: ${myTheme.yellow};
+    }
   }
 `;
 
