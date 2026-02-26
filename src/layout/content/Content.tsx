@@ -25,7 +25,7 @@ export function Content() {
       <ProfileBlock />
       <BlogBlock />
       <ContactBlock />
-      <Map />
+      {/* <Map /> */}
       <Logos />
       <Footer />
     </StyledContent>
