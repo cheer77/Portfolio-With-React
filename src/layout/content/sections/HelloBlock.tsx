@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { slideInLeft, slideInRight } from '../../../animations/motion';
 import styled from 'styled-components';
 import bg from '../../../images/bg.svg';
-import profilePhoto from '../../../images/transparent-photo.webp';
+import profilePhoto from '../../../images/transparent-photo.png';
 import { ac } from '../../../utils/mixins';
 import { myTheme } from '../../../style/Theme.styled';
 import { Icons } from '../../../components/Icons';
@@ -59,7 +59,7 @@ const HelloSection = styled.section`
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 0;
   padding: 0 ${ac('40px', '10px')} 0;
   margin-bottom: ${ac('110px', '50px')};
@@ -112,13 +112,15 @@ const HelloTextBlock = styled.div`
     font-weight: 500;
     color: ${myTheme.gray.dark};
     padding: 16px 32px;
-    border-radius: 5px;
+    border-radius: 8px; /* Slightly softer */
     background-color: ${myTheme.yellow};
+    box-shadow: 0 4px 15px rgba(255, 180, 0, 0.4); /* Glow effect */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
     &:hover {
       background-color: #fdc33a;
+      box-shadow: 0 6px 20px rgba(255, 180, 0, 0.6); /* Stronger glow on hover */
     }
 
     svg {
@@ -135,25 +137,27 @@ const HelloTextBlock = styled.div`
 
 const HelloImgBlock = styled.div`
   position: relative;
-  max-width: ${ac('280px', '200px')};
+  max-width: ${ac('350px', '220px')}; /* Increased slightly for better fit */
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align to the bottom of the container */
   overflow: hidden;
 
   img {
-    position: absolute;
     width: 100%;
-    bottom: ${ac('-130px', '0px')};
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    /* Removed absolute positioning to allow natural flow and scaling */
   }
 
   @media (max-width: 992px) {
-    min-height: 384px;
-    max-width: 230px;
+    min-height: auto;
+    max-width: 250px;
+    margin-top: 30px; /* Add some space between text and image on mobile */
+    
     img {
-      width: auto;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
+      width: 100%;
     }
   }
 

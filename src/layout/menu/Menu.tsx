@@ -92,9 +92,13 @@ const StyledMenu = styled.nav`
   max-width: 7.5%;
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background-color: ${myTheme.glass.bg};
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-left: 1px solid ${myTheme.glass.border};
   overflow: auto;
   padding-bottom: 20px;
+  box-shadow: -1px 0 20px rgba(0, 0, 0, 0.05);
 
   &::-webkit-scrollbar {
     width: 2px; /* ширина всей полосы прокрутки */
@@ -156,9 +160,12 @@ const StyledMenuBtn = styled.a`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #f0f0f6;
+  background-color: rgba(240, 240, 246, 0.6); /* Slightly transparent */
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   margin-bottom: ${ac('43px', '23px')};
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
   &:last-child {
     margin-bottom: 0;

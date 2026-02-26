@@ -213,7 +213,18 @@ const StyledSlide = styled.div<StyledSlide>`
   max-width: 310px;
   width: 100%;
   padding: 54px ${ac('31px', '20px')} 25px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+  }
 
   ${props =>
     props.isPopular &&

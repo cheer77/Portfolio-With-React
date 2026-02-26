@@ -27,10 +27,13 @@ const StyledProfile = styled.aside<{ isClicked: boolean }>`
   max-width: 21.25%;
   //max-width: 305px;
   width: 100%;
-  background-color: #fff;
+  background-color: ${myTheme.glass.bg};
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-right: 1px solid ${myTheme.glass.border};
   height: 100%;
   padding: 0px ${ac('45px', '10px')} 25px ${ac('40px', '10px')};
-  box-shadow: 1px 0 16px -3px rgba(34, 60, 80, 0.1);
+  box-shadow: 1px 0 20px rgba(0, 0, 0, 0.05); /* softer shadow */
   overflow-y: auto;
 
   &::-webkit-scrollbar {

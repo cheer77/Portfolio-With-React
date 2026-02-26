@@ -1,5 +1,17 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, keyframes } from 'styled-components';
 import { myTheme } from './Theme.styled';
+
+const gradientAnimation = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+`;
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -7,7 +19,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #F0F0F6;
+    background: linear-gradient(-45deg, #f0f0f6, #ffe0b2, #e0f7fa, #fce4ec);
+    background-size: 400% 400%;
+    animation: ${gradientAnimation} 15s ease infinite;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     text-transform: capitalize;
