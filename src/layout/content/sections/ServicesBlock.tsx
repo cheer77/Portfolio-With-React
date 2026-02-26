@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { staggerContainer, staggerItem } from '../../../animations/motion';
 import { Titles } from '../../../components/Titles';
 import styled from 'styled-components';
 import { Icons } from '../../../components/Icons';
@@ -10,38 +12,44 @@ export const ServicesBlock = () => {
     <ServicesSection id={'code'}>
       <Titles title={'my services'}></Titles>
 
-      <ServicesItems>
-        <ServicesItem>
+      <ServicesItems
+        as={motion.div}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={staggerContainer}
+      >
+        <ServicesItem as={motion.div} variants={staggerItem}>
           <Icons width={'74'} height={'74'} iconId={'servicesWeb'}></Icons>
           <span>web development</span>
           <p>blog, e-commerce</p>
         </ServicesItem>
 
-        <ServicesItem>
+        <ServicesItem as={motion.div} variants={staggerItem}>
           <Icons width={'74'} height={'74'} iconId={'servicesUi'}></Icons>
           <span>uI/uX design</span>
           <p>Mobile app, website design</p>
         </ServicesItem>
 
-        <ServicesItem>
+        <ServicesItem as={motion.div} variants={staggerItem}>
           <Icons width={'74'} height={'74'} iconId={'servicesMicrophone'}></Icons>
           <span>sound design</span>
           <p>Voice Over, Beat Making</p>
         </ServicesItem>
 
-        <ServicesItem>
+        <ServicesItem as={motion.div} variants={staggerItem}>
           <Icons width={'74'} height={'74'} iconId={'servicesGame'}></Icons>
           <span>game design</span>
           <p>Character Design, Props & Objects</p>
         </ServicesItem>
 
-        <ServicesItem>
+        <ServicesItem as={motion.div} variants={staggerItem}>
           <Icons width={'74'} height={'74'} iconId={'servicesPhoto'}></Icons>
           <span>photography</span>
           <p>portrait, product photography</p>
         </ServicesItem>
 
-        <ServicesItem>
+        <ServicesItem as={motion.div} variants={staggerItem}>
           <Icons width={'74'} height={'74'} iconId={'servicesAdver'}></Icons>
           <span>advertising</span>
           <p>blog, e-commerce</p>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { myTheme } from '../../style/Theme.styled';
 import { Icons } from '../../components/Icons';
 import { ac } from '../../utils/mixins';
@@ -27,27 +28,57 @@ export function Menu() {
         <StyleDayNight>
           <Icons width={'25'} height={'25'} iconId={'dayNight'}></Icons>
         </StyleDayNight>
-        <StyledMenuBtn onClick={() => handleClick('home')}>
+        <StyledMenuBtn
+          as={motion.a}
+          whileHover={{ scale: 1.15 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleClick('home')}
+        >
           <Icons width={'16'} height={'15'} iconId={'home'}></Icons>
         </StyledMenuBtn>
 
-        <StyledMenuBtn onClick={() => handleClick('code')}>
+        <StyledMenuBtn
+          as={motion.a}
+          whileHover={{ scale: 1.15 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleClick('code')}
+        >
           <Icons width={'16'} height={'15'} iconId={'code'}></Icons>
         </StyledMenuBtn>
 
-        <StyledMenuBtn onClick={() => handleClick('student')}>
+        <StyledMenuBtn
+          as={motion.a}
+          whileHover={{ scale: 1.15 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleClick('student')}
+        >
           <Icons width={'16'} height={'15'} iconId={'student'}></Icons>
         </StyledMenuBtn>
 
-        <StyledMenuBtn onClick={() => handleClick('work')}>
+        <StyledMenuBtn
+          as={motion.a}
+          whileHover={{ scale: 1.15 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleClick('work')}
+        >
           <Icons width={'16'} height={'15'} iconId={'work'}></Icons>
         </StyledMenuBtn>
 
-        <StyledMenuBtn onClick={() => handleClick('blog')}>
+        <StyledMenuBtn
+          as={motion.a}
+          whileHover={{ scale: 1.15 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleClick('blog')}
+        >
           <Icons width={'16'} height={'15'} iconId={'blog'}></Icons>
         </StyledMenuBtn>
 
-        <StyledMenuBtn onClick={() => handleClick('contact')}>
+        <StyledMenuBtn
+          as={motion.a}
+          whileHover={{ scale: 1.15 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleClick('contact')}
+        >
           <Icons width={'16'} height={'15'} iconId={'contact'}></Icons>
         </StyledMenuBtn>
       </StyledMenuInner>

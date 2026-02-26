@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { slideInLeft, slideInRight } from '../../../animations/motion';
 import styled from 'styled-components';
 import bg from '../../../images/bg.svg';
 import profilePhoto from '../../../images/transparent-photo.webp';
@@ -13,24 +15,39 @@ export const HelloBlock = () => {
   return (
     <HelloSection id={'home'}>
       <HelloSectionInner>
-        <HelloTextBlock>
-          <h1>
-            I’m Alex Chervonnyi <span>Front-end</span> Developer
-          </h1>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={slideInLeft}
+        >
+          <HelloTextBlock>
+            <h1>
+              I’m Alex Chervonnyi <span>Front-end</span> Developer
+            </h1>
 
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque
-            rutrum semper sed suspendisse nunc lectus.
-          </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque
+              rutrum semper sed suspendisse nunc lectus.
+            </p>
 
-          <button>
-            HIRE ME
-            <Icons width={'11'} height={'10.6'} iconId={'arrowRight'}></Icons>
-          </button>
-        </HelloTextBlock>
-        <HelloImgBlock>
-          <img src={profilePhoto} alt="Developers Photo" />
-        </HelloImgBlock>
+            <button>
+              HIRE ME
+              <Icons width={'11'} height={'10.6'} iconId={'arrowRight'}></Icons>
+            </button>
+          </HelloTextBlock>
+        </motion.div>
+        
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={slideInRight}
+        >
+          <HelloImgBlock>
+            <img src={profilePhoto} alt="Developers Photo" />
+          </HelloImgBlock>
+        </motion.div>
       </HelloSectionInner>
     </HelloSection>
   );

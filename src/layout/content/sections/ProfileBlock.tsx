@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '../../../animations/motion';
 import styled from 'styled-components';
 import { ac } from '../../../utils/mixins';
 import { Titles } from '../../../components/Titles';
@@ -6,7 +8,13 @@ import { ProfileFilter } from '../../../components/ProfileFilter';
 
 export const ProfileBlock: React.FC = () => {
   return (
-    <ProfileSection>
+    <ProfileSection
+      as={motion.section}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={fadeInUp}
+    >
       <Titles title={'Portfolio'} />
 
       <ProfileFilter />
